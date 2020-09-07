@@ -1,0 +1,246 @@
+.clientsSays-page {
+  width: 100vw;
+  height: 760px;
+  padding-bottom: 80px;
+  @include flex(row, center, center);
+
+  @include mobile {
+    height: 490px;
+    padding-bottom: 40px;
+  }
+
+  @include mobile-w {
+    height: 490px;
+    padding-bottom: 40px;
+  }
+}
+
+.container--clientsSays {
+  @include flex(column, center, flex-start);
+  position: relative;
+}
+
+.section-heading--clientsSays {
+  margin-top: 86px;
+  margin-bottom: 40px;
+
+  @include mobile {
+    margin: 40px 0 20px 0;
+  }
+
+  @include mobile-w {
+    margin: 40px 0 20px 0;
+  }
+}
+
+.clientsSliderTop {
+  width: 100%;
+  height: 245px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+
+  @include mobile {
+    height: 200px;
+  }
+
+  @include mobile-w {
+    height: 200px;
+  }
+
+  &__wrap {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__slide {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+    transform: translateZ(0);
+    @include flex(row, flex-start, space-between);
+    padding-top: 30px;
+
+    &__leftBlock {
+      height: 100%;
+      width: calc((495 / 1150) * 100%);
+
+      @include flex(column, flex-end, flex-start);
+    }
+
+    &__title {
+      @include titleSmaller;
+      text-align: right;
+      @include flex(column, flex-end, center);
+
+      @include mobile {
+        font-size: 20px;
+      }
+
+      @include mobile-w {
+        font-size: 27px;
+      }
+
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        padding-top: 10px;
+        margin: 0;
+        margin-bottom: 15px;
+
+        @include mobile {
+          width: 20px;
+        }
+
+        @include mobile-w {
+          width: 30px;
+        }
+      }
+    }
+
+    &__subtitle {
+      @include subtitle;
+      font-size: 18px;
+      text-align: right;
+
+      @include mobile {
+        font-size: 10px;
+      }
+
+      @include mobile-w {
+        font-size: 15px;
+      }
+    }
+
+    &__rightBlock {
+      height: 100%;
+      width: calc((560 / 1150) * 100%);
+      padding-right: 10%;
+
+      @include flex(column, flex-end, flex-start);
+
+      @include mobile {
+        padding-right: 0;
+      }
+
+      @include mobile-w {
+        padding-right: 0;
+      }
+    }
+
+    &__text {
+      @include paragraph;
+
+      @include mobile {
+        font-size: 10px;
+      }
+
+      @include mobile-w {
+        font-size: 12px;
+      }
+
+      @include tablet {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.clientsSliderNav {
+  width: 100%;
+  height: 265px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+
+  @include mobile {
+    height: 165px;
+  }
+
+  @include mobile-w {
+    height: 165px;
+  }
+
+  &__wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+  }
+
+  &__slide {
+    height: 140px;
+    opacity: 0.3;
+    background: none;
+    flex-shrink: 0;
+    position: relative;
+    transition-property: transform;
+    transform: translateZ(0);
+    cursor: pointer;
+
+    &__img {
+      width: 100%;
+    }
+  }
+}
+
+.clientsSliderNav .swiper-slide-active {
+  opacity: 1;
+}
+
+.clientsSliderNav .swiper-pagination-bullets {
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include flex(row, center, flex-start);
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+
+}
+
+.clientsSliderNav .swiper-pagination-bullet {
+  border-radius: 50%;
+  border: solid 1px $black;
+  background: none;
+  opacity: 1;
+  padding: 6px;
+  margin: 8px;
+  cursor: pointer;
+
+  @include mobile {
+    padding: 4px;
+  }
+
+  @include mobile-w {
+    padding: 4px;
+  }
+}
+
+.clientsSliderNav .swiper-pagination-bullet-active {
+  background-color: $black;
+}

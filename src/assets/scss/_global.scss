@@ -1,0 +1,111 @@
+.container {
+  width: calc((1150 / 1400) * 100%);
+  max-width: 1150px;
+  height: 100%;
+
+  @include mobile {
+    width: 90%;
+  }
+}
+
+.section-heading {
+  @include sectionTitle;
+}
+
+.section-heading--white {
+  color: $white;
+}
+
+.logo {
+  font-family: $font;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 0.8;
+  text-align: left;
+  color: $black;
+
+  &__dot {
+    font-size: 48px;
+  }
+}
+
+.activePage {
+  color: black;
+  position: relative;
+
+  &::after {
+    display: block;
+    content: '';
+    border-bottom: 2px solid $black;
+    width: 35px;
+    padding-top: 6px;
+    position: absolute;
+  }
+}
+
+.activeLinkWrap {
+  text-align: left;
+  border-bottom: 4px solid $black;
+  font-weight: 700;
+}
+
+.activeLink {
+  font-weight: bold;
+}
+
+.hiddenElement {
+  display: none;
+}
+
+.activeFilter {
+  font-weight: bold;
+  color: $black;
+}
+
+.contacts__form input:-webkit-autofill,
+.contacts__form input:-webkit-autofill:hover,
+.contacts__form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: $white;
+  transition: background-color 5000s ease-in-out 0s;
+  font-family: $font;
+  color: $white;
+  font-size: 18px;
+  font-weight: 300;
+
+  @include mobile {
+    font-size: 14px;
+  }
+
+  @include mobile-w {
+    font-size: 14px;
+  }
+
+  @include tablet {
+    font-size: 16px;
+  }
+}
+
+//user-agent chrome autocomplete resetting
+
+.contactsOnWhite__form input:-webkit-autofill,
+.contactsOnWhite__form input:-webkit-autofill:hover,
+.contactsOnWhite__form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: $black;
+  transition: background-color 5000s ease-in-out 0s;
+  font-family: $font;
+  color: $white;
+  font-size: 18px;
+  font-weight: 300;
+
+  @include mobile {
+    font-size: 14px;
+  }
+
+  @include mobile-w {
+    font-size: 14px;
+  }
+
+  @include tablet {
+    font-size: 16px;
+  }
+}

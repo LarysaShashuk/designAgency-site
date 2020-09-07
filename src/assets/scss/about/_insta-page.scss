@@ -1,0 +1,51 @@
+.insta-page {
+  width: 100vw;
+  height: auto;
+  @include flex(column, center, flex-start);
+}
+
+.section-heading--insta {
+  margin: 88px 0;
+
+  @include mobile {
+    margin: 40px 0;
+  }
+
+  @include mobile-w {
+    margin: 40px 0;
+  }
+}
+
+.photoSet {
+  width: 100%;
+  @include flex(row, center, space-evenly);
+
+  &__item {
+    width: calc((268 / 1400) * 100%);
+
+    &__img {
+      width: 100%;
+    }
+  }
+}
+
+.insta-button {
+  @include whiteButton;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  @include flex(row, center, center);
+
+  @include mobile {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  @include mobile-w {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  @include tablet {
+    margin: 50px 0;
+  }
+}

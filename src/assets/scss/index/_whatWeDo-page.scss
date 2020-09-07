@@ -1,0 +1,161 @@
+.whatWeDo-page {
+  width: 100vw;
+  height: auto;
+  margin-top: 87px;
+  @include flex(row, center, center);
+  padding-bottom: 30px;
+
+  @include mobile {
+    margin-top: 50px;
+  }
+
+  @include mobile-w {
+    margin-top: 50px;
+  }
+}
+
+.container--whatWeDo {
+  @include flex(column, center, flex-start);
+}
+
+.section-heading--whatWeDo {
+  @include mobile {
+    margin-bottom: 20px;
+  }
+
+  @include mobile-w {
+    margin-bottom: 20px;
+  }
+
+  @include tablet {
+    margin-bottom: 20px;
+  }
+}
+
+.whatWeDo-item {
+  width: 100%;
+  height: auto;
+  margin-top: 100px;
+  @include flex(row, flex-start, space-between);
+
+  @include mobile {
+    margin-top: 30px;
+    @include flex(column, center, space-between);
+  }
+
+  @include mobile-w {
+    margin-top: 30px;
+    @include flex(column, center, space-between);
+  }
+
+  @include tablet {
+    margin-top: 70px;
+    @include flex(column, center, space-between);
+  }
+
+  &--reverse {
+    @include flex(row-reverse, flex-start, space-between);
+
+    @include mobile {
+      @include flex(column, center, space-between);
+    }
+
+    @include mobile-w {
+      @include flex(column, center, space-between);
+    }
+
+    @include tablet {
+      @include flex(column, center, space-between);
+    }
+  }
+
+  &__img {
+    width: ((560/1150) * 100%);
+    height: 100%;
+
+    @include mobile {
+      width: 90%;
+    }
+
+    @include mobile-w {
+      width: 90%;
+    }
+
+    @include tablet {
+      width: 90%;
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    width: calc((490 / 1150) * 100%);
+    height: 100%;
+    @include flex(column, flex-start, flex-start);
+
+    @include mobile {
+      width: 90%;
+      margin-top: 20px;
+    }
+
+    @include mobile-w {
+      width: 90%;
+      margin-top: 40px;
+    }
+
+    @include tablet {
+      width: 90%;
+      margin-top: 40px;
+    }
+
+    &__subtitle {
+      @include subtitle;
+    }
+
+    &__title {
+      @include title;
+    }
+
+    &__text {
+      @include paragraph;
+      margin-top: 25px;
+
+      @include mobile {
+        margin-top: 15px;
+        text-align: justify;
+      }
+
+      @include mobile-w {
+        margin-top: 15px;
+        text-align: justify;
+      }
+
+      @include tablet {
+        margin-top: 15px;
+        text-align: justify;
+      }
+    }
+
+    &__button {
+      @include whiteButton;
+      margin-top: 40px;
+
+      @include mobile {
+        align-self: center;
+        margin-top: 30px;
+      }
+
+      @include mobile-w {
+        align-self: center;
+        margin-top: 30px;
+      }
+
+      @include tablet {
+        align-self: center;
+        margin-top: 30px;
+      }
+    }
+  }
+}

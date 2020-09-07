@@ -1,0 +1,93 @@
+.contact-page {
+  border-top: 1px solid $grayBorder;
+  border-bottom: 1px solid $grayBorder;
+
+  &__layout {
+    background-color: $white;
+  }
+}
+
+.contactsOnWhite__info__text {
+  color: $grayText;
+}
+
+.contactsOnWhite__info__icon {
+  color: $black;
+}
+
+.contactsOnWhite__info__social__item {
+  background-color: $black;
+  border: 1px solid $black;
+
+  &:hover {
+    background-color: $white;
+  }
+
+  &:hover .contactsOnWhite__info__social__icon {
+    color: $black;
+  }
+}
+
+.contactsOnWhite__info__social__icon {
+  color: $white;
+}
+
+.contactsOnWhite__pop-up__icon {
+  background-color: black;
+}
+
+.contactsOnWhite__pop-up__text {
+  color: $black;
+}
+
+.contactsOnWhite__pop-up__button {
+  @include blackButton;
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+.contactsOnWhite__form__button {
+  @include blackButton;
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+.contactsOnWhite__form__label {
+  color: $grayTextForm;
+}
+
+.contactsOnWhite__form__input {
+  border-top: 1px solid $grayBorderForm;
+  color: $black;
+
+  &--message {
+    border-bottom: 1px solid $grayBorderForm;
+  }
+
+  &:hover {
+    border-top: none;
+    border-bottom: 1px solid $black;
+  }
+
+  &:focus {
+    border-top: none;
+    border-bottom: 1px solid $black;
+  }
+}
+
+#map {
+  width: 100%;
+  height: 450px;
+
+  @include mobile {
+    height: 300px;
+  }
+
+  @include mobile-w {
+    height: 300px;
+  }
+}

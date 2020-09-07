@@ -1,0 +1,202 @@
+/* Mixins:
+  ========================================================================== */
+
+// flex settings
+@mixin flex($direction, $align-items, $justify-content) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+// size to one line
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// buttons
+@mixin blackButton {
+  width: 170px;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid $black;
+  background-color: $black;
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.33;
+  text-align: center;
+  color: $white;
+  cursor: pointer;
+
+  @include flex(row, center, center);
+
+  &:hover {
+    border: 1px solid $black;
+    background-color: $creme;
+    color: $black;
+  }
+}
+
+@mixin whiteButton {
+  @include blackButton;
+  border: 1px solid $grayBorder;
+  background-color: $white;
+  color: $black;
+
+  &:hover {
+    border: 1px solid $black;
+    background: none;
+  }
+}
+
+// typography
+@mixin title {
+  font-family: $font;
+  font-size: 48px;
+  font-weight: 700;
+  text-align: left;
+  color: $black;
+
+  &::after {
+    display: block;
+    content: '';
+    border-bottom: 2px solid $black;
+    width: 55px;
+    padding-top: 15px;
+
+    @include mobile {
+      width: 35px;
+      padding-top: 10px;
+    }
+  }
+
+  @include mobile {
+    font-size: 30px;
+  }
+}
+
+@mixin subtitle {
+  @include title;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 0.6;
+
+  &::after {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  @include mobile {
+    font-size: 20px;
+  }
+}
+
+@mixin sectionTitle {
+  font-family: $font;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 0.8;
+  text-align: center;
+  color: $black;
+
+  @include mobile {
+    font-size: 40px;
+  }
+
+  @include mobile-w {
+    font-size: 45px;
+  }
+}
+
+@mixin paragraph {
+  font-family: $font;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: left;
+  color: $grayText;
+
+  @include mobile {
+    font-size: 12px;
+  }
+}
+
+@mixin textNav {
+  @include paragraph;
+  line-height: 1.33;
+  color: $grayNav;
+}
+
+@mixin titleSmaller {
+  font-family: $font;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.05;
+  text-align: center;
+  color: $black;
+
+  @include mobile {
+    font-size: 30px;
+  }
+
+  @include mobile-w {
+    font-size: 30px;
+  }
+
+  @include tablet {
+    font-size: 30px;
+  }
+
+  &::after {
+    display: block;
+    content: '';
+    border-bottom: 2px solid $black;
+    width: 55px;
+    padding-top: 12px;
+    margin: 0 auto;
+
+    @include mobile {
+      width: 35px;
+    }
+
+    @include mobile-w {
+      width: 35px;
+    }
+
+    @include tablet {
+      width: 35px;
+    }
+
+    @include laptop {
+      width: 40px;
+    }
+  }
+
+  &::before {
+    display: block;
+    content: '';
+    border-bottom: 2px solid $black;
+    width: 55px;
+    padding-top: 12px;
+    margin: 0 auto;
+
+    @include mobile {
+      width: 35px;
+    }
+
+    @include mobile-w {
+      width: 35px;
+    }
+
+    @include tablet {
+      width: 35px;
+    }
+
+    @include laptop {
+      width: 40px;
+    }
+  }
+}

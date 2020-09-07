@@ -1,0 +1,131 @@
+.container--bestPrice {
+  @include flex(row, center, center);
+  padding: 70px 0;
+
+  @include mobile {
+    @include flex(column, center, center);
+    padding: 40px 0;
+  }
+
+  @include mobile-w {
+    @include flex(column, center, center);
+    padding: 40px 0;
+  }
+}
+
+.bestPrice-page {
+  width: 100vw;
+  height: auto;
+  background-color: $black;
+  @include flex(row, center, center);
+
+  &__title {
+    font-family: $font;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.4;
+    text-align: left;
+    color: $white;
+
+    @include mobile {
+      font-size: 25px;
+    }
+
+    @include mobile-w {
+      font-size: 25px;
+    }
+
+    @include tablet {
+      font-size: 25px;
+    }
+  }
+
+  &__emptyDiv {
+    display: block;
+    border-bottom: 1px solid $white;
+    width: 55px;
+    height: 1px;
+    margin: 0 50px;
+
+    @include mobile {
+      width: 35px;
+      margin: 20px 0;
+    }
+
+    @include mobile-w {
+      width: 35px;
+      margin: 20px 0;
+    }
+
+    @include tablet {
+      width: 35px;
+      margin: 0 30px;
+    }
+
+    @include laptop {
+      width: 40px;
+    }
+  }
+
+  &__price {
+    font-family: $font;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.05;
+    text-align: left;
+    color: $white;
+
+    @include mobile {
+      font-size: 25px;
+    }
+
+    @include mobile-w {
+      font-size: 25px;
+    }
+
+    @include tablet {
+      font-size: 25px;
+    }
+
+    &__desc {
+      font-size: 30px;
+      font-weight: 300;
+      color: $grayLine;
+
+      @include mobile {
+        font-size: 18px;
+      }
+
+      @include mobile-w {
+        font-size: 18px;
+      }
+
+      @include tablet {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__button {
+    margin: 0;
+    margin-left: 120px;
+
+    &:hover {
+      border: none;
+      background-color: $creme;
+      color: $black;
+    }
+
+    @include mobile {
+      margin: 40px 0 20px 0;
+    }
+
+    @include mobile-w {
+      margin: 40px 0 20px 0;
+    }
+
+    @include tablet {
+      margin-left: 50px;
+    }
+  }
+}

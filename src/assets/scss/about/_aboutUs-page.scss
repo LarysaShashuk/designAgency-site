@@ -1,0 +1,195 @@
+.aboutUs-page {
+  width: 100vw;
+  height: auto;
+  @include flex(row, center, center);
+  border-top: 1px solid $grayBorder;
+}
+
+.container--aboutUs {
+  @include flex(column, center, flex-start);
+}
+
+.section-heading--aboutUs {
+  margin-top: 86px;
+  margin-bottom: 100px;
+
+  @include mobile {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  @include mobile-w {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+}
+
+.aboutUs-content {
+  width: 100%;
+  height: auto;
+  margin-bottom: 90px;
+  @include flex(row, flex-start, space-between);
+
+  @include mobile {
+    @include flex(column, flex-start, space-between);
+    margin-bottom: 40px;
+  }
+
+  @include mobile-w {
+    @include flex(column, flex-start, space-between);
+    margin-bottom: 40px;
+  }
+
+  @include tablet {
+    @include flex(column, flex-start, space-between);
+    margin-bottom: 40px;
+  }
+
+  &__leftBlock {
+    width: calc((560 / 1150) * 100%);
+    height: 100%;
+    @include flex(column, flex-start, flex-start);
+
+    @include mobile {
+      width: 100%;
+    }
+
+    @include mobile-w {
+      width: 100%;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include laptop {
+      width: 40%;
+    }
+
+    &__imgWrap {
+      width: 100%;
+
+      &__img {
+        width: 100%;
+      }
+    }
+
+    &__title {
+      @include titleSmaller;
+      text-align: left;
+      margin-left: 70px;
+      width: 65%;
+
+      @include mobile {
+        margin-left: 0;
+        font-size: 20px;
+      }
+
+      @include mobile-w {
+        margin-left: 0;
+      }
+
+      @include tablet {
+        margin-left: 0;
+      }
+
+      @include laptop {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        margin: 0;
+        margin-top: 50px;
+        margin-bottom: 43px;
+
+        @include mobile {
+          margin-top: 20px;
+          margin-bottom: 15px;
+        }
+
+        @include mobile-w {
+          margin-top: 20px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  &__rightBlock {
+    width: calc((480 / 1150) * 100%);
+    height: 100%;
+    @include flex(column, flex-start, flex-start);
+
+    @include mobile {
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    @include mobile-w {
+      width: 100%;
+      margin-top: 15px;
+    }
+
+    @include tablet {
+      width: 100%;
+      margin-top: 45px;
+    }
+
+    @include laptop {
+      width: 55%;
+    }
+
+    &__text {
+      @include paragraph;
+      padding-right: 2px;
+
+      &::before {
+        display: block;
+        content: '';
+        border-bottom: 2px solid $black;
+        width: 55px;
+        margin: 0;
+        margin-bottom: 48px;
+
+        @include mobile {
+          width: 35px;
+          margin-bottom: 25px;
+        }
+
+        @include mobile-w {
+          width: 35px;
+          margin-bottom: 25px;
+        }
+
+        @include tablet {
+          width: 35px;
+        }
+
+        @include laptop {
+          width: 40px;
+        }
+      }
+    }
+
+    &__button {
+      margin-top: 46px;
+      @include whiteButton;
+      @include flex(row, center, center);
+
+      @include mobile {
+        align-self: center;
+        margin-top: 30px;
+      }
+
+      @include mobile-w {
+        align-self: center;
+        margin-top: 30px;
+      }
+    }
+  }
+}

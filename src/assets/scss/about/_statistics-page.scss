@@ -1,0 +1,77 @@
+.statistics-page {
+  width: 100vw;
+  height: auto;
+  @include flex(row, center, center);
+  border-top: 1px solid $grayBorder;
+}
+
+.container--statistics {
+  @include flex(row, center, center);
+
+  @include mobile {
+    @include flex(column, center, center);
+    padding: 30px 0;
+  }
+}
+
+.statistics-item {
+  width: calc((350 / 1150) * 100%);
+  height: auto;
+  margin: 100px 0;
+  @include flex(column, center, center);
+
+  @include mobile {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  @include mobile-w {
+    margin: 40px 0;
+  }
+
+  &__number {
+    @include titleSmaller;
+
+    @include mobile {
+      font-size: 20px;
+    }
+
+    @include mobile-w {
+      font-size: 20px;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      margin-top: 20px;
+      margin-bottom: 15px;
+
+      @include mobile {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      @include mobile-w {
+        margin-top: 7px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: $font;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    color: $black;
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+    @include mobile-w {
+      font-size: 12px;
+    }
+  }
+}

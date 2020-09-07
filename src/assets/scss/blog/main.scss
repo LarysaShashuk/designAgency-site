@@ -1,0 +1,81 @@
+.blog-page {
+  border-top: 1px solid $grayBorder;
+  border-bottom: 1px solid $grayBorder;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.container--blog {
+  margin-top: 90px;
+  padding-bottom: 80px;
+
+  @include mobile {
+    margin-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  @include mobile-w {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+.blog-nav {
+  width: auto;
+  @include flex(row, center, center);
+  margin-top: 95px;
+
+  @include mobile {
+    margin-top: 40px;
+  }
+
+  @include mobile-w {
+    margin-top: 50px;
+  }
+
+  &__item {
+    @include textNav;
+    margin: 0 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: $black;
+    }
+
+    @include mobile {
+      font-size: 9px;
+    }
+
+    @include mobile-w {
+      font-size: 12px;
+    }
+  }
+}
+
+.whatWeDo-blog__content__title {
+  &::after {
+    display: none;
+  }
+}
+
+.whatWeDo-blog__content__subtitle {
+  margin-top: 25px;
+  font-size: 18px;
+
+  &::after {
+    display: block;
+    content: '';
+    border-bottom: 2px solid $black;
+    width: 55px;
+    margin-top: 50px;
+
+    @include mobile {
+      width: 35px;
+      margin-top: 30px;
+    }
+  }
+}
+
+.blog-button {
+  margin: 25px 0;
+}

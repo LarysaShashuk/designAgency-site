@@ -1,0 +1,130 @@
+.burger-menu {
+  height: 29px;
+  width: 40px;
+  cursor: pointer;
+  z-index: 15;
+
+  @include mobile {
+    height: 20px;
+  }
+
+  @include laptop {
+    display: none;
+  }
+
+  @include desktop {
+    display: none;
+  }
+
+  &__button-open {
+    width: 100%;
+    height: 100%;
+    @include flex(column, center, space-between);
+    background: none;
+    position: relative;
+    cursor: pointer;
+
+    &__line {
+      width: 100%;
+      height: 4px;
+      border-radius: 5px;
+      background-color: $black;
+      cursor: pointer;
+
+      @include mobile {
+        height: 2px;
+      }
+    }
+  }
+}
+
+.burger-modal {
+  width: 100vw;
+  height: auto;
+  z-index: 50;
+  @include flex(row, center, center);
+
+  &__navigation {
+    width: 100%;
+    height: auto;
+    @include flex(column, flex-start, flex-start);
+    position: relative;
+    background-color: $white;
+
+    &__list {
+      margin-top: 3px;
+      list-style-type: none;
+      width: 100%;
+      @include flex(column, flex-start, flex-start);
+
+      &__item {
+        width: 100%;
+        height: 50px;
+        text-align: left;
+        background-color: $creme;
+        font-size: 20px;
+        font-weight: 300;
+        border: 3px solid $white;
+        border-top: none;
+        @include flex(row, center, flex-start);
+
+        &:hover {
+          text-align: left;
+          border-bottom: 4px solid $black;
+          font-weight: 700;
+        }
+
+        @include mobile {
+          height: 40px;
+          font-size: 15px;
+        }
+      }
+
+      &__link {
+        font-family: $font;
+        font-size: inherit;
+        font-weight: inherit;
+        text-align: left;
+        color: $black;
+        margin-left: 20px;
+        width: 100%;
+        height: 100%;
+        @include flex(row, center, flex-start);
+
+        &:active {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+.burger-menu__button-close__line {
+  cursor: pointer;
+  &:before,
+  &:after {
+    position: absolute;
+    top: -7px;
+    left: 15px;
+    content: ' ';
+    height: 40px;
+    width: 4px;
+    background-color: black;
+    border-radius: 4px;
+    z-index: 50;
+    cursor: pointer;
+
+    @include mobile {
+      width: 2px;
+      height: 35px;
+    }
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}

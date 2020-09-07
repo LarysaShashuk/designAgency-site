@@ -1,0 +1,52 @@
+.container--header-block {
+  @include flex(row, flex-end, space-between);
+
+  @include mobile {
+  }
+  @include flex(row, flex-end, space-between);
+}
+
+.header-block {
+  width: 100vw;
+  height: 29px;
+  padding: 60px 0 50px 0;
+  @include flex(row, center, center);
+
+  @include mobile {
+    padding: 50px 0 10px 0;
+  }
+
+  &__nav {
+    width: calc((420 / 1150) * 100%);
+    height: 100%;
+
+    @include laptop {
+      min-width: 50%;
+    }
+
+    @include tablet {
+      display: none;
+    }
+
+    @include mobile-w {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
+
+    &__list {
+      @include size(100%, 100%);
+      @include flex(row, flex-end, space-between);
+
+      &__link {
+        @include textNav;
+
+        &:hover {
+          color: $black;
+        }
+      }
+    }
+  }
+}

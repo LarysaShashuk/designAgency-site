@@ -1,0 +1,63 @@
+.footer-page {
+  width: 100vw;
+  height: 135px;
+  @include flex(row, center, center);
+
+  @include mobile {
+    height: 60px;
+  }
+
+  @include mobile-w {
+    height: 60px;
+  }
+
+  @include tablet {
+    height: 100px;
+  }
+
+  &__date {
+    font-family: $font;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.71;
+    text-align: center;
+    color: $black;
+
+    @include mobile {
+      font-size: 10px;
+    }
+
+    @include mobile-w {
+      font-size: 10px;
+    }
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__rightsReserver {
+    font-family: $font;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.71;
+    text-align: center;
+    color: $grayText;
+
+    @include mobile {
+      font-size: 7px;
+    }
+
+    @include mobile-w {
+      font-size: 7px;
+    }
+
+    @include tablet {
+      font-size: 10px;
+    }
+  }
+}
+
+.container--footer {
+  @include flex(column, center, center);
+}

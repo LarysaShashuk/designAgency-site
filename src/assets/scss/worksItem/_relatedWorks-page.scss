@@ -1,0 +1,249 @@
+.relatedWorks-page {
+  width: 100vw;
+  height: auto;
+  @include flex(column, center, center);
+  background-color: $creme;
+}
+
+.container--relatedWorks {
+  @include flex(column, center, flex-start);
+}
+
+.section-heading--relatedWorks {
+  margin-top: 86px;
+
+  @include mobile {
+    margin-top: 50px;
+  }
+
+  @include mobile-w {
+    margin-top: 50px;
+  }
+}
+
+.relatedWorksSlider {
+  margin-top: 79px;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+
+  @include mobile {
+    margin-top: 40px;
+  }
+
+  @include mobile-w {
+    margin-top: 40px;
+  }
+
+  &__wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+  }
+
+  &__slide {
+    background: none;
+    flex-shrink: 0;
+    position: relative;
+    transition-property: transform;
+    transform: translateZ(0);
+    cursor: pointer;
+
+    &__link {
+      border-radius: unset;
+      border: unset;
+      height: 100%;
+      @include flex(column, flex-start, center);
+      outline: none;
+      padding-bottom: 153px;
+
+      @include mobile {
+        padding-bottom: 100px;
+        @include flex(column, center, center);
+      }
+
+      @include mobile-w {
+        padding-bottom: 100px;
+        @include flex(column, center, center);
+      }
+
+      @include tablet {
+        @include flex(column, center, center);
+      }
+    }
+
+    &__title {
+      font-family: $font;
+      font-size: 36px;
+      font-weight: bold;
+      text-align: left;
+      color: $black;
+
+      @include mobile {
+        text-align: center;
+        font-size: 30px;
+      }
+
+      @include mobile-w {
+        text-align: center;
+        font-size: 30px;
+      }
+
+      @include tablet {
+        text-align: center;
+        font-size: 30px;
+      }
+
+      @include laptop {
+        font-size: 30px;
+      }
+    }
+
+    &__data {
+      font-family: $font;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 2.67;
+      text-align: left;
+      color: $black;
+
+      &::before {
+        display: block;
+        content: '';
+        border-bottom: 2px solid $black;
+        width: 55px;
+        margin-top: 19px;
+        margin-bottom: 12px;
+
+        @include mobile {
+          width: 35px;
+          border-bottom: 1px solid $black;
+          margin: 0 auto;
+          margin-top: 19px;
+          margin-bottom: 12px;
+        }
+
+        @include mobile-w {
+          width: 35px;
+          border-bottom: 1px solid $black;
+          margin: 0 auto;
+          margin-top: 19px;
+          margin-bottom: 12px;
+        }
+
+        @include tablet {
+          width: 35px;
+          margin: 0 auto;
+          margin-top: 19px;
+          margin-bottom: 12px;
+        }
+
+        @include laptop {
+          width: 40px;
+        }
+      }
+    }
+  }
+}
+
+.relatedWorksSlider .swiper-pagination-bullets {
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include flex(row, center, flex-start);
+  padding: 0;
+  margin: 0;
+  z-index: 10;
+}
+
+.relatedWorksSlider .swiper-pagination-bullet {
+  border-radius: 50%;
+  border: solid 1px $black;
+  background: none;
+  opacity: 1;
+  padding: 6px;
+  //margin: 8px;
+  margin: 0 4px;
+  cursor: pointer;
+  left: 50px;
+
+  @include mobile {
+    padding: 4px;
+  }
+
+  @include mobile-w {
+    padding: 4px;
+  }
+}
+
+.relatedWorksSlider .swiper-pagination-bullet-active {
+  background-color: $black;
+}
+
+.swiper-pagination-bullets-dynamic {
+  overflow: hidden;
+  font-size: 0;
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
+  transform: scale(0.33);
+  position: relative;
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active,
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
+  transform: scale(1);
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
+  transform: scale(0.66);
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
+  transform: scale(0.33);
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
+  transform: scale(0.66);
+}
+.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
+  transform: scale(0.33);
+}
+
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 10px;
+
+  @include mobile {
+    margin: 0 4px;
+  }
+}
+.swiper-container-horizontal
+  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.swiper-container-horizontal
+  > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic
+  .swiper-pagination-bullet {
+  transition: left 0.2s, -webkit-transform 0.2s;
+  transition: transform 0.2s, left 0.2s;
+  transition: transform 0.2s, left 0.2s, -webkit-transform 0.2s;
+}
+.swiper-container-horizontal.swiper-container-rtl
+  > .swiper-pagination-bullets-dynamic
+  .swiper-pagination-bullet {
+  transition: right 0.2s, -webkit-transform 0.2s;
+  transition: transform 0.2s, right 0.2s;
+  transition: transform 0.2s, right 0.2s, -webkit-transform 0.2s;
+}
