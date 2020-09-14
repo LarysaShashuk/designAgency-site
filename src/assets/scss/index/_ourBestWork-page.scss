@@ -71,7 +71,6 @@
     }
 
     &__title {
-      width: 80%;
       @include titleSmaller;
 
       @include mobile {

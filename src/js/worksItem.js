@@ -85,7 +85,7 @@ const worksItemsDB = [
   },
   {
     id: 'worksItem-w4',
-    title: 'freelancer`s home',
+    title: 'house design',
     type: 'print design',
     imgs: [
       './assets/img/w8-1.jpg',

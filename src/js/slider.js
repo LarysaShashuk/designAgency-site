@@ -1,8 +1,6 @@
 // core version + navigation, pagination modules:
 import Swiper, { Navigation, Pagination } from '../../node_modules/swiper'
 
-//import '../../node_modules/swiper/swiper-bundle.css'
-
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination])
 
@@ -12,6 +10,9 @@ export const sliderHeader = document.querySelector('.swiper-container1')
 const swiperHeader = new Swiper(sliderHeader, {
   direction: 'vertical',
   loop: true,
+  noSwiping: true,
+  allowSlidePrev: true,
+  allowSlideNext: true,
   pagination: {
     el: '.swiper-pagination1',
     type: 'bullets',

@@ -220,7 +220,7 @@ if (worksPage) {
   simpleFilter(worksTabDesign, worksTopicDesign)
 }
 
-// remove whitespace in input va lue
+// remove whitespace in input value
 window.onload = function() {
   const inputs = document.querySelectorAll('input')
   for (var i = 0; i < inputs.length; i++) {
