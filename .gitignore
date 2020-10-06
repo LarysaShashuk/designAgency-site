@@ -3,6 +3,9 @@
 .idea
 .vscode
 
+# Design
+design
+
 # Node
 node_modules
 
